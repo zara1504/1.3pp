@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Zara's Portfolio</title>
+</head>
+<body>
+    <header>
+        <h1 class="portfolio-title">Zara's Portfolio</h1>
+    </header>
+    <nav class="tabs">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About Me</a></li>
+            <li><a href="task1_1p.html">Task 1.1p</a></li>
+            <li><a href="task1_2p.html">Task 1.2p</a></li>
+            <li><a href="summary.html">Summary</a></li>
+            <li><a href="form.html">Form</a></li>
+            <li><a href="game.html">Game</a></li> 
+        </ul>
+    </nav>
+
+    <div id="app">
+        <div v-if="showMessage">
+            <h2>Welcome to my portfolio!</h2>
+        </div>
+        
+        <div>
+            <h3>Links:</h3>
+            <ul>
+                
+                <li v-for="link in links"><a :href="link.url">{{ link.text }}</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                showMessage: true, 
+                links: [ 
+                    { text: 'Google', url: 'https://www.google.com' },
+                    { text: 'GitHub', url: 'https://github.com' },
+                    { text: 'Tetris', url: 'https://tetris.com/play-tetris' }
+                ]
+            }
+        });
+    </script>
+</body>
+</html>
+
+

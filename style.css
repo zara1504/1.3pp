@@ -1,0 +1,198 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('background-homepage.jpeg'); 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    min-height: 100vh;
+    margin: 0;
+}
+
+
+.container {
+    background-color: wheat; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    color: #333; 
+}
+
+.portfolio-title {
+    font-size: 36px;
+}
+
+.subtitle {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.tabs {
+    background-color: wheat; 
+    margin-top: 20px;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    display: inline;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #333; 
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #87CEEB; 
+}
+
+.about-me-container {
+    background-color: #87CEEB; 
+    border: 2px solid wheat; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: #333; 
+}
+
+.about-me-container a {
+    color: #333; 
+    text-decoration: none;
+}
+
+.about-me-container a:hover {
+    color: #87CEEB; 
+}
+
+.about-me-table {
+    border-collapse: collapse;
+    width: 80%; 
+    margin: 0 auto; 
+    border: 2px solid #333; 
+}
+
+.about-me-table td, .about-me-table th {
+    border: 2px solid #333; 
+    padding: 10px;
+    text-align: left;
+}
+
+.about-me-table td {
+    text-align: center;
+}
+
+.task-container {
+    background-color: wheat; 
+    border: 2px solid wheat; 
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px;
+    color: #333; 
+}
+
+.small-image {
+    max-width: 60%; 
+    display: block;
+    margin: 0 auto; 
+}
+
+
+.text-box {
+    background-color: wheat; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.summary-column {
+    background-color: wheat; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    color: #333; 
+}
+
+.summary-image {
+    text-align: center; 
+    margin-top: 20px; 
+}
+
+.summary-column p {
+    text-align: left;
+}
+
+.form-container {
+    background-color: wheat; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    color: #333; 
+    text-align: center; 
+    margin: 20px auto; 
+    max-width: 80%; 
+}
+
+.form-container label,
+.form-container input,
+.form-container textarea,
+.form-container input[type="submit"] {
+    display: block; 
+    margin: 10px auto; 
+    width: 80%; 
+}
+
+.form-container input[type="submit"] {
+    background-color: #87CEEB; 
+    color: #fff; 
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.form-container input[type="submit"]:hover {
+    background-color: #333; 
+}
+
+.intro-box {
+    background-color: wheat; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    color: #333; 
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.wheat-box {
+    background-color: wheat; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center; 
+}
+
+
