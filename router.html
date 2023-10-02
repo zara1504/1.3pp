@@ -9,6 +9,7 @@
 <body>
     <header>
         <h1 class="portfolio-title">Zara's Portfolio</h1>
+        <h2 class="subtitle">Router</h2>
     </header>
     <nav class="tabs">
         <ul>
@@ -22,39 +23,36 @@
             <li><a href="router.html">Router</a></li>
         </ul>
     </nav>
-
     <div id="app">
-        <div v-if="showMessage">
-            <h2>Welcome to my portfolio!</h2>
-        </div>
-        
+        <h3>Router in Vue 3</h3>
+        <h2>Vue Router</h2>
+        <p>
+            This is my Vue Router
+        </p>
         <div>
-            <h3>Links:</h3>
-            <ul>
-                <li v-for="link in links" :key="link.url">
-                    <a :href="link.url">{{ link.text }}</a>
-                </li>
-            </ul>
+            <router-link to="/message">Message</router-link> |
+            <a href="../">Parent Directory</a>
         </div>
+        <router-view></router-view>
     </div>
 
-    <script src="https://unpkg.com/vue@3.2.22/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.2.0/dist/vue.global.prod.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-router@4.0.0/dist/vue-router.global.prod.js"></script>
     <script>
-        const app = Vue.createApp({
-            data() {
-                return {
-                    showMessage: true, 
-                    links: [ 
-                        { text: 'Google', url: 'https://www.google.com' },
-                        { text: 'GitHub', url: 'https://github.com' },
-                        { text: 'Tetris', url: 'https://tetris.com/play-tetris' }
-                    ]
-                };
-            }
+
+        const MessageComponent = { template: '<div><h2>I Hope You Like My Page</h2><p>YAY!</p></div>' };
+
+        const router = VueRouter.createRouter({
+            history: VueRouter.createWebHistory(),
+            routes: [
+                { path: '/message', component: MessageComponent },
+                { path: '/', redirect: '/message' } 
+            ],
         });
+        const app = Vue.createApp({});
+        app.use(router); 
 
         app.mount('#app');
     </script>
 </body>
 </html>
-

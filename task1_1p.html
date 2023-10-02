@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
-
     <title>Zara's Portfolio</title>
 </head>
 <body>
@@ -22,6 +20,7 @@
             <li><a href="summary.html">Summary</a></li>
             <li><a href="form.html">Form</a></li>
             <li><a href="game.html">Game</a></li> 
+            <li><a href="router.html">Router</a></li>
         </ul>
     </nav>
 
@@ -31,14 +30,50 @@
         <div class="image-container">
             <img src="task1.jpeg" alt="Task 1.1 Image" class="small-image">
         </div>
-
-        <div class="text-box">
-            <p>
-                In this task I was given the opportunity to make an HTML website for the first time. I based my website around Snoopy from the Peanuts show and was able to use different elements like tables, and forms with this I was also able to use different CSS factors like changing fonts, colours, backgrounds and many more. This task gave me the ability to learn and reflect on how to use HTML and CSS to create websites and also allowing me to find out more about how each and every website is made through a similar structure. 
-            </p>
+        
+        <div id="app" style="background-color: wheat; font-size: 15px;">
+            <div @click="changeText">{{ text }}</div>
         </div>
+        
+        <table>
+            <tr>
+                <td>
+                    <p>Did I complete task 1.1p?</p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>
+                        <input type="radio" v-model="rdio" value="Yes">
+                        Yes
+                    </label>
+                    <label>
+                        <input type="radio" v-model="rdio" value="No">
+                        No
+                    </label>
+                </td>
+            </tr>
+        </table>
     </div>
+    
+    <script src="https://unpkg.com/vue@3.2.25/dist/vue.global.js"></script>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+                    text: 'In this task, I was given the opportunity to make an HTML website for the first time. I based my website around Snoopy from the Peanuts show and was able to use different elements like tables, and forms with this I was also able to use different CSS factors like changing fonts, colors, backgrounds, and many more. This task gave me the ability to learn and reflect on how to use HTML and CSS to create websites and also allowed me to find out more about how each and every website is made through a similar structure.',
+                    rdio: 'Yes'
+                };
+            },
+            methods: {
+                changeText() {
+                    this.text = 'Thank you for viewing!';
+                }
+            }
+        });
+    
+        app.mount('#app');
+    </script>
 </body>
 </html>
-
 
